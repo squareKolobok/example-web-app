@@ -12,13 +12,13 @@ public class HomeController(ILogger<HomeController> logger, IOptions<MySettings>
 
     public IActionResult Index()
     {
-        // Вызывает рендер вьюшки по пути /Views/Home/Index
+        // Р’С‹Р·С‹РІР°РµС‚ СЂРµРЅРґРµСЂ РІСЊСЋС€РєРё РїРѕ РїСѓС‚Рё /Views/Home/Index
         return View(_settings);
     }
 
     public IActionResult Help()
     {
-        // Вызывает рендер вьюшки по пути /Views/Home/Help
+        // Р’С‹Р·С‹РІР°РµС‚ СЂРµРЅРґРµСЂ РІСЊСЋС€РєРё РїРѕ РїСѓС‚Рё /Views/Home/Help
         return View();
     }
 
@@ -27,7 +27,7 @@ public class HomeController(ILogger<HomeController> logger, IOptions<MySettings>
     {
         var requestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
 
-        logger.LogWarning("Обращение к методу ошибки RequestId={RequestId}", requestId);
+        logger.LogWarning("РћР±СЂР°С‰РµРЅРёРµ Рє РјРµС‚РѕРґСѓ РѕС€РёР±РєРё RequestId={RequestId}", requestId);
         return View(new ErrorViewModel { RequestId = requestId });
     }
 }
